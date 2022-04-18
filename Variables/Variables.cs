@@ -6,26 +6,54 @@ namespace Brackeys_101
     {
         public void VariablesE02()
         {
-            double num01;
-            double num02;
-            Console.WriteLine("Calculate simple multiplication: ");
-            Console.Write("Input a number: ");
-            num01 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter another number: ");
-            num02 = Convert.ToDouble(Console.ReadLine());
-            double result = num01 * num02;
-            Console.WriteLine("The result is: " + result);
+            Console.Title = "Average";
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
-            Console.WriteLine("\nCalculate average:");
-            Console.WriteLine("Enter 3 numbers to calculate the average: ");
-            var x = Convert.ToDouble(Console.ReadLine());
-            var y = Convert.ToDouble(Console.ReadLine());
-            var z = Convert.ToDouble(Console.ReadLine());
-            double sum = x + y + z;
-            double average = 0;
-            average = sum / 3;
-            Console.WriteLine("\nAverage is: " + average);
+            Console.Write("For how many numbers do you want to calculate average? ");
+            double[] numbers = new double[Convert.ToInt32(Console.ReadLine())];
+            Console.WriteLine();
+
+            AskNumbers(numbers);
+            Console.WriteLine("\nAverage is: " + Average(numbers));
+
             Console.ReadKey();
+        }
+        /// <summary>Asks User to Input some Numbers</summary>
+		/// <param name="numbers">An Array of Number</param>
+        private static void AskNumbers(double[] numbers)
+        {
+            for (int i = 1; i <= numbers.Length; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        Console.Write("Enter " + i + "st Number: ");
+                        break;
+                    case 2:
+                        Console.Write("Enter " + i + "nd Number: ");
+                        break;
+                    case 3:
+                        Console.Write("Enter " + i + "rd Number: ");
+                        break;
+                    default:
+                        Console.Write("Enter: " + i + "th Number: ");
+                        break;
+                }
+                numbers[i - 1] = Convert.ToDouble(Console.ReadLine());
+            }
+        }
+        /// <summary>Takes Array of Numbers and Averages them</summary>
+		/// <param name="numbers">An Array of Number that you want to Average</param>
+		/// <returns>Returns a Averaged out Number</returns>
+        private static double Average(double[] numbers)
+        {
+            double average = new double();
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                average += numbers[i];
+            }
+            return average / numbers.Length;
         }
     }
 }
