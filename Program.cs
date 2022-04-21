@@ -12,7 +12,9 @@ namespace Brackeys_101
             //Variables variable1 = new Variables();
             //variable1.VariablesE02();
 
-            Conditions.ConditionsE03();
+            //Conditions.ConditionsE03();
+
+            Loops.LoopsE04();
 
             Console.ReadKey();
         }
