@@ -18,7 +18,7 @@ namespace Brackeys_101
 
             //Arrays.ArraysE05();
 
-            Methods.MeetAlien();
+            /*Methods.MeetAlien();
             Console.WriteLine("------------------------");
             Methods.MeetAlien();
             Console.WriteLine("------------------------");
@@ -33,6 +33,13 @@ namespace Brackeys_101
                 Console.WriteLine(result + " is an uneven number!");
             }
             Methods.Challenge();
+            */
+            
+            Wizard wizard01 = new Wizard("Parry Hopper", "Unexpecto Patronum");
+            wizard01.CastSpell();
+            Wizard wizard02 = new Wizard("Glindalf Merlinson", "Abracadabra");
+            wizard02.CastSpell();
+            Console.WriteLine(Wizard.Count);
 
             Console.ReadKey();
         }
