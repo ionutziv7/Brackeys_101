@@ -16,7 +16,23 @@ namespace Brackeys_101
 
             //Loops.LoopsE04();
 
-            Arrays.ArraysE05();
+            //Arrays.ArraysE05();
+
+            Methods.MeetAlien();
+            Console.WriteLine("------------------------");
+            Methods.MeetAlien();
+            Console.WriteLine("------------------------");
+            int result = Methods.Multiply(1, 33);
+            Console.WriteLine("The result is: " + result);
+            if (result % 2 == 0)
+            {
+                Console.WriteLine(result + " is an even number!");
+            }
+            else
+            {
+                Console.WriteLine(result + " is an uneven number!");
+            }
+            Methods.Challenge();
 
             Console.ReadKey();
         }
