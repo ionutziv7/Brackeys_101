@@ -14,7 +14,9 @@ namespace Brackeys_101
 
             //Conditions.ConditionsE03();
 
-            Loops.LoopsE04();
+            //Loops.LoopsE04();
+
+            Arrays.ArraysE05();
 
             Console.ReadKey();
         }
