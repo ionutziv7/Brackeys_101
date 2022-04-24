@@ -12,7 +12,7 @@ namespace Brackeys_101
             //Variables variable1 = new Variables();
             //variable1.VariablesE02();
 
-            //Conditions.ConditionsE03();
+            Conditions.ConditionsE03();
 
             //Loops.LoopsE04();
 
@@ -34,12 +34,16 @@ namespace Brackeys_101
             }
             Methods.Challenge();
             */
-            
-            Wizard wizard01 = new Wizard("Parry Hopper", "Unexpecto Patronum");
+
+            /*Wizard wizard01 = new Wizard("Parry Hopper", "Unexpecto Patronum");
             wizard01.CastSpell();
             Wizard wizard02 = new Wizard("Glindalf Merlinson", "Abracadabra");
             wizard02.CastSpell();
             Console.WriteLine(Wizard.Count);
+            */
+
+            DivNumbers d = new DivNumbers();
+            d.division(25, 0);
 
             Console.ReadKey();
         }
